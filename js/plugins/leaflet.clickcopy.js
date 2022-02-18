@@ -20,7 +20,7 @@ import "../leaflet.js";
                 let plane = this.getPlane();
                 let x = Math.floor(e.latlng.lng);
                 let y = Math.floor(e.latlng.lat);
-                let copystr = `|x=${x}|y=${y}|plane=${plane}`;
+                let copystr = `${x}${y}`;
                 navigator.clipboard.writeText(copystr).then(() =>
                     this.addMessage(`Copied to clipboard: ${copystr}`), () => console.error("Cannot copy text to clipboard"));
             }
